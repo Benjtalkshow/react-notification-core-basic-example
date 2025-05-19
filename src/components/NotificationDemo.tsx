@@ -1,3 +1,4 @@
+"use client"
 import { useState, useRef, useEffect } from "react"
 import { useNotifications, formatTimestamp } from "react-notification-core"
 import { Bell, Check, Trash2, RefreshCw, X } from "lucide-react"
