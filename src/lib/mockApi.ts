@@ -47,7 +47,6 @@ let notifications = [...mockNotifications]
 
 // Mock API functions
 export async function mockFetchNotifications(): Promise<Notification[]> {
-  // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 500))
 
   // Simulate occasional errors (1 in 10 chance)
@@ -60,8 +59,6 @@ export async function mockFetchNotifications(): Promise<Notification[]> {
 
 export async function mockMarkAsRead(id: string): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 300))
-
-  // Update the notification
   notifications = notifications.map((notification) =>
     notification.id === id ? { ...notification, read: true } : notification,
   )
@@ -69,14 +66,10 @@ export async function mockMarkAsRead(id: string): Promise<void> {
 
 export async function mockMarkAllAsRead(): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 300))
-
-  // Mark all as read
   notifications = notifications.map((notification) => ({ ...notification, read: true }))
 }
 
 export async function mockDeleteNotification(id: string): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, 300))
-
-  // Delete the notification
   notifications = notifications.filter((notification) => notification.id !== id)
 }
