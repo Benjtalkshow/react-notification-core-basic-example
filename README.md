@@ -76,7 +76,8 @@ Includes a sample set of notifications with varied types and states.
 
 ## Screenshots
 
-> ![Demo Screenshot]()
+> ![Demo Screenshot](![image](https://github.com/user-attachments/assets/cbd176be-2f43-4461-8583-895a2dccdb4b)
+)
 > *Interactive notification dropdown with actions.*
 
 ## Customization
